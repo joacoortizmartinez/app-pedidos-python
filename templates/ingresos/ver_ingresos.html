@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+    <link rel="stylesheet" href="static/style.css" />
+</head>
+<body>
+    <nav>
+        <a href="/">
+            <img id="foto" src="{{ url_for('static', filename='/ruffo.jpg') }}">
+            ATN
+        </a>
+    </nav>
+    <h3> Los ingresos son:</h3>
+
+    <table>
+        <tr>
+            <td>ID ingreso</td>
+            <td>INGRESO</td>
+            <td>DESCRIPCION</td>
+            <td>FECHA</td>
+        </tr>
+        {% for i in resultado %}
+            <tr>
+                <td>{{ i.id_ingreso }}</td>
+                <td>{{ i.ingreso }}</td>
+                <td>{{ i.descripcion }}</td>
+                <td>{{ i.fecha }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <table>
+        <tr>
+            <td>TOTAL</td>
+            <td>{{ total }} pesos</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/style.css" />
+
+</head>
+<body>
+    
+    <nav>
+        <a href="/">
+            <img id="foto" src="{{ url_for('static', filename='/ruffo.jpg') }}">
+            ATN
+        </a>
+    </nav>
+    
+   <h1 id="titulo">Bienvenido/a a Administra tu Negocio</h1>
+   <h3>Que quieres hacer?</h3>
+   <ul id="lista">
+        <li>
+            <a href = "/opciones"> Administrar clientes</a>
+        </li>
+
+        <li>
+          <a href = "/opciones-pedidos"> Administrar Pedidos</a>
+        </li>
+
+        <li>
+            <a href = "/opciones-gastos"> Administrar Gastos</a>
+        </li>
+
+        <li>
+            <a href = "/opciones-ingresos"> Administrar Ingresos </a>
+        </li>
+
+        <li>
+            <a href = "/balance"> Balance</a>
+        </li>
+   </ul>
+
+</body>
+</html>

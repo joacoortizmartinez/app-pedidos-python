@@ -1,0 +1,32 @@
+<!-- formulario_modificacion.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Cliente</title>
+    <link rel="stylesheet" href="static/style.css" />
+</head>
+<body>
+    <nav>
+        <a href="/">
+            <img id="foto" src="{{ url_for('static', filename='/ruffo.jpg') }}">
+            ATN
+        </a>
+    </nav>
+    <h1>Modificar Cliente</h1>
+    <form action="/modificar_cliente" method="post">
+        <label for="id_cliente">ID del Cliente:</label>
+        <input type="text" id="id_cliente" name="id_cliente" required><br>
+
+        <label for="direccion">Nueva Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required><br>
+
+        <label for="telefono">Nuevo Teléfono:</label>
+        <input type="text" id="telefono" name="telefono" required><br>
+
+        <input type="submit" value="Modificar Cliente">
+    </form>
+</body>
+</html>

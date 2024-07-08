@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/style.css" />
+</head>
+<body>
+    <nav>
+        <a href="/">
+            <img id="foto" src="{{ url_for('static', filename='/ruffo.jpg') }}">
+            ATN
+        </a>
+    </nav>
+    <h3>ADMINISTRA TUS PEDIDOS</h3>
+    <ul id="lista">
+        <li>
+            <a href = "/form-agregar-pedido">Agregar pedidos</a>
+        </li>
+        <li>
+            <a href = "/ver-pedidos">Ver pedidos</a>
+        </li>
+        <li>
+            <a href = "/form-elimi-pedido">eliminar pedidos</a>
+        </li>
+    </ul>
+</body>
+</html>

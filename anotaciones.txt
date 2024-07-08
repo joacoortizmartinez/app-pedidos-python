@@ -1,0 +1,46 @@
+#1: 
+se pone "<int:id>" porque como es get_customer, es decir, obtener la informacion de un cliente de la base de datos, 
+se pone el id en la url para encontrarlo en la bd
+
+#2 x2: 
+si bien "get_all_customers" y "save_customer" tienen la misma direccion, tienen distinta funcion. 
+El get_all tiene una funcion GET, que en http, es un método de solicitud que se utiliza para solicitar datos de 
+un servidor web. Y save tiene una funcion POST, que es un método de solicitud que se utiliza para solicitar datos 
+de un servidor web.
+
+#3: 
+se importa mysql 
+
+#4: 
+esto lo que hace es que devuelve un objeto (cur) que nos permite guardar en la bd
+
+#5: 
+se le dice a cur, que ejecute esa instruccion en mysql
+
+#6: 
+realiza completamente el comando
+
+#7: 
+selecciona toda la informacion guardada en la tabla clientes
+
+#8: 
+se asegura que se guarde toda la informacion con el fetchall, y se guarda esa info en 
+una variable llamada "data"
+
+#9: 
+se crea un arreglo vacio, llamado resultado
+
+#10: 
+se hace un for, donde se va a ir recorriendo, y fila es la viriable que hace que se recorra
+
+#11: 
+se crea una variable "contenido", que es la que guardara en forma de diccionario, con clave con el 
+nombre del campo de la bd, y como valor, se le pasa fila y la posicion, como tengo 3 campos:
+    id_cliente, telefono, direccion
+los valores son 0, 1, 2, en ese orden
+
+#12:
+al arreglo resultado, se le agregan los valores de la bd
+
+#13:
+toma el objeto resultado, lo convierte a formato JSON y lo devuelve como parte de la respuesta HTTP

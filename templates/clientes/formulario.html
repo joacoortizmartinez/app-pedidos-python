@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar el Cliente</title>
+    <link rel="stylesheet" href="static/style.css" />
+</head>
+<body>
+    <nav>
+        <a href="/">
+            <img id="foto" src="{{ url_for('static', filename='/ruffo.jpg') }}">
+            ATN
+        </a>
+    </nav>
+    <h1>Agregar clientes</h1>
+    <form action="/agregar-cliente" method="post">
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono" required><br>
+
+        <input type="submit" value="Agregar Cliente">
+    </form>
+</body>
+</html>

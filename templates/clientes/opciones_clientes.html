@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/style.css" />
+</head>
+<body>
+    <nav>
+        <a href="/">
+            <img id="foto" src="{{ url_for('static', filename='/ruffo.jpg') }}">
+            ATN
+        </a>
+    </nav>
+    <h3>ADMINISTRA TUS CLIENTES</h3>
+    <ul id="lista">
+        <li>
+            <a href = "/form">Agregar clientes</a>
+        </li>
+
+        <li>
+          <a href = "/formulario_modificacion">Modificar clientes</a>
+        </li>
+
+        <li>
+            <a href = "/formulario_eliminacion">Eliminar clientes</a>
+        </li>
+
+        <li>
+            <a href = "/customers">Ver todos los clientes</a>
+        </li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css" />
+    <title>BALANCE</title>
+
+</head>
+
+<body>
+        
+    <nav>
+        <a href="/">
+            <img id="foto" src="{{ url_for('static', filename='/ruffo.jpg') }}">
+            ATN
+        </a>
+    </nav>
+    <h3>El balance (ingresos-gastos) es el siguiente</h3>
+    <p>El total de los ingresos es: {{ total }} </p>
+    <p>El total de los gastos es: {{total1}} </p>
+    <p>El total del balance (ingresos - gastos) es: {{total - total1}} </p>
+</body>
+</html>

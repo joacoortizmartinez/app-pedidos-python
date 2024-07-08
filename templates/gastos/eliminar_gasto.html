@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/style.css" />
+</head>
+<body>
+    <nav>
+        <a href="/">
+            <img id="foto" src="{{ url_for('static', filename='/ruffo.jpg') }}">
+            ATN
+        </a>
+    </nav>
+    <h3>Que gasto queres eliminar?</h3>
+    <form action="/delete-gasto" method="post">
+        <label for="id_gasto">ID del gasto:</label>
+        <input type="number" id="id_gasto" name="id_gasto" required><br>
+
+        <input type="submit" value="eliminar gasto">
+    </form>
+</body>
+</html>

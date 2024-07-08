@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ver pedidos</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+    <link rel="stylesheet" href="static/style.css" />
+</head>
+<body>
+    <nav>
+        <a href="/">
+            <img id="foto" src="{{ url_for('static', filename='/ruffo.jpg') }}">
+            ATN
+        </a>
+    </nav>
+    <form action="/ver-pedidos" method="post">
+        <label for="fecha">De qué fecha quieres ver los pedidos:</label>
+        <input type="date" id="fecha" name="fecha" required>
+        <button type="submit">Ver Pedidos</button>
+    </form>
+    
+    {% if pedidos %}
+        <h2>Pedidos para la fecha: {{ fecha_seleccionada }}</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Descripción</th>
+                    <th>Fecha</th>
+                    <th>Importe</th>
+                    <th>id cliente</th>
+                    <th>direccion</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pedido in pedidos %}
+                    <tr>
+                        <td>{{ pedido.id_pedido }}</td>
+                        <td>{{ pedido.descripcion }}</td>
+                        <td>{{ pedido.fecha }}</td>
+                        <td>{{ pedido.importe }}</td>
+                        <td>{{ pedido.id_cliente }}</td>
+                        <td>{{ pedido.direccion_cliente }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+    <br>
+    <table>
+        <tr> TOTAL IMPORTES (ingresos totales del dia):</tr>
+        <tr> {{ total_ingre_pedidos }} </tr>
+    </table>
+</body>
+</html>
